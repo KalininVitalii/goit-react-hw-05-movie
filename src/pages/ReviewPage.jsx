@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ReviewList } from '../components/Reviews/Reviews';
-import { MoviesAPI } from '../servises/MoviesApi';
+import { MoviesAPI } from '../servises/Api';
 import { Loader } from '../components/Loader/Loader';
 
 const ReviewsPage = () => {

@@ -6,7 +6,7 @@ import {
   Link,
 } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
-import { MoviesAPI } from '../servises/MoviesApi';
+import { MoviesAPI } from '../servises/Api';
 import { Loader } from '../components/Loader/Loader';
 import { Main, Btn, Title } from './MoviesDetails.styled';
 

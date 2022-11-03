@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { MoviesAPI } from '../../servises/MoviesApi';
+import { MoviesAPI } from '../../servises/Api';
 import { Loader } from '../../components/Loader/Loader';
 
 const HomePage = () => {

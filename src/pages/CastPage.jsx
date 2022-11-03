@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { CastList } from '../components/Cast/Cast';
-import { MoviesAPI } from '../servises/MoviesApi';
+import { MoviesAPI } from '../servises/Api';
 import { Loader } from 'components/Loader/Loader';
 
 const CastPage = () => {
