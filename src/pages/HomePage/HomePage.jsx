@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { MoviesAPI } from '../../servises/Api';
-import { Loader } from '../../components/Loader/Loader';
 
 const HomePage = () => {
   const [trendMovies, setTrendMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const location = useLocation();
-
+  console.log(isLoading);
   useEffect(() => {
     const getMovies = async () => {
       setIsLoading(true);
@@ -30,7 +29,6 @@ const HomePage = () => {
 
   return (
     <>
-      {isLoading && <Loader />}
       {error && <p>Sorry.</p>}
       {!!trendMovies.length && (
         <>

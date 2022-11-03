@@ -18,10 +18,11 @@ const MoviesDetails = () => {
 
   const location = useLocation();
   const navigation = useNavigate();
-
+  console.log(isLoading);
   useEffect(() => {
     const getMovie = async movieId => {
       setIsLoading(true);
+
       try {
         const movieDetails = await MoviesAPI.fetchMovieById(movieId);
         setMovieInfo(movieDetails);

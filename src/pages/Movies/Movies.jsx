@@ -3,7 +3,6 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { MoviesAPI } from 'servises/Api';
 import { SearchBox } from 'components/SearchMovie/SearchMovie';
 import { MovieList } from './Movies.styled';
-import { Loader } from 'components/Loader/Loader';
 
 const Movies = () => {
   const location = useLocation();
@@ -35,7 +34,7 @@ const Movies = () => {
       getMovies(filterParam);
     }
   }, [filterParam]);
-
+  console.log(isLoading);
   const onFormSubmit = event => {
     event.preventDefault();
     setSearchParams({ searchQuery });

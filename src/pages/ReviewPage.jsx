@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ReviewList } from '../components/Reviews/Reviews';
 import { MoviesAPI } from '../servises/Api';
-import { Loader } from '../components/Loader/Loader';
 
 const ReviewsPage = () => {
   const [movieInfo, setMovieInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const { movieId } = useParams();
-
+  console.log(isLoading);
   useEffect(() => {
     const getMovie = async movieId => {
       setIsLoading(true);
@@ -25,7 +24,6 @@ const ReviewsPage = () => {
   }, [movieId]);
   return (
     <>
-      {isLoading && <Loader />}
       {error && <p>We don't have any reviews for this movie</p>}
       {movieInfo && <ReviewList movieInfo={movieInfo} />}
     </>
